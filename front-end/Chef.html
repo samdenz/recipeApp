@@ -46,8 +46,17 @@
 
         <p style="color:antiquewhite">As the chef, you are able to:</p>
         <div>
-            <button id="upload">Upload</button>
-            <span>Upload recipes</span>
+            <h2>Upload Food Recipe</h2>
+            <form id="food-upload-form">
+                <input type="text" id="recipename" placeholder="Recipe Name" required>
+                <textarea id="ingredients" placeholder="Ingredients" required></textarea>
+                <textarea id="instructions" placeholder="Instructions" required></textarea>
+                <input type="text" id="image" placeholder="Image URL">
+                <input type="number" id="serving" placeholder="Serving Size" required>
+                <input type="number" id="preptime" placeholder="Prep Time (mins)" required>
+                <input type="number" id="cooktime" placeholder="Cook Time (mins)" required>
+                <button type="submit" id="upload">Upload Recipe</button>
+            </form>
         </div>
 
         <br>
@@ -60,10 +69,35 @@
         <br>
 
         <div>
-            <button id="delete">Delete</button>
-            <span>Delete recipes</span>
+            <h2>Delete Food Recipe</h2>
+            <input type="text" id="delete-recipe-id" placeholder="Recipe ID" required>
+            <button id="delete-recipe-btn">Delete Recipe</button>
         </div>
     </div>
+    <script>
+        document.getElementById('food-upload-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const data = {
+            recipename: document.getElementById('recipename').value,
+            ingredients: document.getElementById('ingredients').value,
+            instructions: document.getElementById('instructions').value,
+            image: document.getElementById('image').value,
+            serving: document.getElementById('serving').value,
+            preptime: document.getElementById('preptime').value,
+            cooktime: document.getElementById('cooktime').value,
+          };
+          uploadFoodRecipe(data);
+        });
+      
+        document.getElementById('delete-recipe-btn').addEventListener('click', () => {
+          const recipeId = document.getElementById('delete-recipe-id').value;
+          if (recipeId) {
+            deleteFoodRecipe(recipeId);
+          } else {
+            alert('Please enter a Recipe ID to delete.');
+          }
+        });
+      </script>
 <!--footer section-->
     <footer class="navbar">
         <ul class="nav-list">
