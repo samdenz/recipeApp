@@ -1,0 +1,114 @@
+body {
+    background-image: url(/images/LandPage.jpg);
+     background-size: cover; 
+     background-attachment: fixed;
+      background-repeat: no-repeat;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header */
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 2em;
+    margin: 30px auto 15px;
+    text-align: center;
+    border-bottom: 3px solid #ddd;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* Contact Section */
+.contact {
+    
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 2px solid #eee;
+}
+
+.contact p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Terms and Privacy Section */
+.terms-conditions, .privacy-policy {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.terms-conditions:hover, .privacy-policy:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.terms-conditions h2, .privacy-policy h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.terms-conditions p, .privacy-policy p {
+    font-size: 1em;
+    color: #555;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-image {
+        margin-bottom: 15px;
+    }
+}
